@@ -55,6 +55,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  min-height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  .overlay {
+    min-height: 100dvh;
+  }
 }
 
 .backdrop {
@@ -66,8 +73,9 @@
 .sheet {
   position: relative;
   margin: 0 auto;
-  width: min(480px, 100%);
-  max-height: 100%;
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - 32px);
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -76,6 +84,12 @@
   gap: 24px;
   overflow: hidden;
   animation: slideUp 0.3s ease;
+}
+
+@supports (height: 100dvh) {
+  .sheet {
+    max-height: calc(100dvh - 32px);
+  }
 }
 
 @keyframes slideUp {
@@ -160,6 +174,7 @@
   overflow-y: auto;
   padding-right: 8px;
   margin-right: -8px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .month_section {
@@ -281,6 +296,7 @@
   .sheet {
     border-radius: 20px 20px 0 0;
     padding: 20px 16px 24px;
+    max-height: calc(100vh - 16px);
   }
 
   .trigger {
@@ -293,6 +309,14 @@
 
   .summary_row {
     gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  @supports (height: 100dvh) {
+    .sheet {
+      max-height: calc(100dvh - 16px);
+    }
   }
 }
 
