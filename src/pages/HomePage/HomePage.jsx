@@ -9,10 +9,10 @@ const Home = () => {
     <div>
       <NavList/> 
         <div className={styles.home_wrapper}> 
-          <img src={camper_img} alt="Campers" width="625" height="222"/>
+          <img src={camper_img} alt="Campervan rentals" width="625" height="222"/>
           <div>
             <Link to="/catalog" className={styles.hero_btn}>
-              Buy a camper
+              Find a campervan to rent
             </Link>
           </div>
         </div>

@@ -26,6 +26,11 @@ export const Filter = ({ onSearchComplete }) => {
   const [cityFilter, setCityFilter] = useState('');
   const [equipmentFilters, setEquipmentFilters] = useState([]);
   const [selectedType, setSelectedType] = useState(null);
+  const [rentalStartDate, setRentalStartDate] = useState('');
+  const [rentalEndDate, setRentalEndDate] = useState('');
+  const [guestCount, setGuestCount] = useState('');
+  const [dateError, setDateError] = useState('');
+  const [guestError, setGuestError] = useState('');
 
   useEffect(() => {
     const fetchCampersData = async () => {
@@ -117,36 +122,101 @@ export const Filter = ({ onSearchComplete }) => {
     }
   };
 
+  const handleSearch = () => {
+    let hasError = false;
+
+    if (rentalStartDate && rentalEndDate && new Date(rentalStartDate) > new Date(rentalEndDate)) {
+      setDateError('Return date must be after the pick-up date.');
+      hasError = true;
+    } else {
+      setDateError('');
+    }
+
+    if (guestCount && Number(guestCount) < 1) {
+      setGuestError('At least one traveler is required.');
+      hasError = true;
+    } else {
+      setGuestError('');
+    }
+
+    if (!hasError) {
+      filterCampers();
+    }
+  };
+
   return (
     <div className={styles.filter_container}>
-      <div className={styles.location_container}>
-        <label className={styles.location_label} htmlFor="location_input">
-          Location{' '}
-        </label>
-        <div className={styles.relative_container}>
+      <div className={styles.rental_details_wrapper}>
+        <div className={styles.location_container}>
+          <label className={styles.location_label} htmlFor="location_input">
+            Pick-up location
+          </label>
+          <div className={styles.relative_container}>
+            <input
+              className={styles.location_input}
+              type="text"
+              id="location_input"
+              name="location"
+              placeholder="City"
+              required
+              onBlur={handleBlur}
+              onFocus={handleFocus}
+              onChange={(e) => setCityFilter(e.target.value)}
+            />
+            <img
+              className={styles.location_icon_disabled}
+              src={isInputFocused || inputValue ? location_icon : location_disabled_icon}
+              alt="location_icon"
+            />
+          </div>
+        </div>
+        <div className={styles.dates_wrapper}>
+          <p className={styles.section_label}>Rental dates</p>
+          <div className={styles.date_inputs}>
+            <label className={styles.visually_hidden} htmlFor="rental_start_date">Pick-up date</label>
+            <input
+              className={styles.date_input}
+              type="date"
+              id="rental_start_date"
+              name="rental_start_date"
+              value={rentalStartDate}
+              onChange={(e) => setRentalStartDate(e.target.value)}
+            />
+            <label className={styles.visually_hidden} htmlFor="rental_end_date">Return date</label>
+            <input
+              className={styles.date_input}
+              type="date"
+              id="rental_end_date"
+              name="rental_end_date"
+              min={rentalStartDate || undefined}
+              value={rentalEndDate}
+              onChange={(e) => setRentalEndDate(e.target.value)}
+            />
+          </div>
+          {dateError && <p className={styles.error_text}>{dateError}</p>}
+        </div>
+        <div className={styles.people_wrapper}>
+          <label className={styles.section_label} htmlFor="guests_count">
+            Travelers
+          </label>
           <input
-            className={styles.location_input}
-            type="text"
-            id="location_input"
-            name="location"
-            placeholder="Location"
-            required
-            onBlur={handleBlur}
-            onFocus={handleFocus}
-            onChange={(e) => setCityFilter(e.target.value)}
+            className={styles.number_input}
+            type="number"
+            id="guests_count"
+            name="guests_count"
+            min="1"
+            placeholder="Number of people"
+            value={guestCount}
+            onChange={(e) => setGuestCount(e.target.value)}
           />
-          <img
-            className={styles.location_icon_disabled}
-            src={isInputFocused || inputValue ? location_icon : location_disabled_icon}
-            alt="location_icon"
-          />
+          {guestError && <p className={styles.error_text}>{guestError}</p>}
         </div>
       </div>
       <div>
-        <p className={styles.filters_title}>Filters</p>
+        <p className={styles.filters_title}>Rental filters</p>
         <div className={styles.filters_wrapper}>
           <div className={styles.equipment_wrapper}>
-            <h2 className={styles.title}>Vehicle equipment</h2>
+            <h2 className={styles.title}>Campervan equipment</h2>
             <ul className={styles.equipment_list}>
               {equipment.map(({ id, name, icon, data }) => (
                 <li key={id} className={`${styles.equipment_list_item} ${equipmentFilters.includes(data) ? styles.checked : ''}`}>
@@ -172,7 +242,7 @@ export const Filter = ({ onSearchComplete }) => {
             </ul>
           </div>
           <div className={styles.types_wrapper}>
-            <h2 className={styles.title}>Vehicle type</h2>
+            <h2 className={styles.title}>Campervan type</h2>
             <ul className={styles.types_list}>
               {camperTypes.map((type) => (
                 <li 
@@ -191,7 +261,7 @@ export const Filter = ({ onSearchComplete }) => {
           </div>
         </div>
       </div>
-      <button onClick={filterCampers} className={styles.search_btn}>Search</button>
+      <button onClick={handleSearch} className={styles.search_btn}>Search</button>
     </div>
   );
 };
