@@ -161,3 +161,93 @@
   height: 100%;
   width: 888px;
 }
+
+@media (max-width: 1024px) {
+  .card_wrapper {
+    padding: 0 24px 32px;
+  }
+
+  .card_list_wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card_wrapper {
+    padding: 0 16px 32px;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .card_info {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .card_img_wrapper {
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
+  }
+
+  .card_img {
+    border-radius: 14px;
+  }
+
+  .card_list_wrapper {
+    max-width: 100%;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .left_info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .description {
+    max-width: 100%;
+    margin-top: 16px;
+    -webkit-line-clamp: 3;
+  }
+
+  .list_details {
+    margin: 16px 0;
+    gap: 12px;
+  }
+
+  .item_details {
+    width: calc(50% - 6px);
+  }
+
+  .show_btn {
+    width: 100%;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card_info {
+    padding: 16px;
+  }
+
+  .card_img_wrapper {
+    height: 200px;
+  }
+
+  .secondary_info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .item_details {
+    width: 100%;
+  }
+}
