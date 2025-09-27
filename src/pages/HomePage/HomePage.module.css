@@ -5,6 +5,15 @@
   align-items: center;
   justify-content: center;
   margin: 24px 0;
+  padding: 0 24px;
+}
+
+.hero_image {
+  width: 100%;
+  max-width: 625px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
 }
 .hero_btn {
   display: block;
@@ -22,4 +31,37 @@
 .hero_btn:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(16, 24, 40, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .home_wrapper {
+    gap: 48px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .home_wrapper {
+    gap: 32px;
+    margin: 16px 0;
+    padding: 0 16px;
+  }
+
+  .hero_btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home_wrapper {
+    gap: 24px;
+  }
+
+  .hero_btn {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
 }

@@ -218,6 +218,96 @@
   margin-bottom: 14px;
 }
 
+@media (max-width: 1200px) {
+  .modal {
+    width: 90vw;
+    max-width: 900px;
+  }
+
+  .gallery_advert {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 90vw;
+    max-width: 720px;
+    padding: 32px 28px;
+  }
+
+  .gallery_advert {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .photo_advert {
+    width: 48%;
+    min-width: 220px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .tab {
+    flex-direction: column;
+  }
+
+  .left_container,
+  .right_container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: calc(100vw - 32px);
+    margin: 20px auto;
+    padding: 24px 20px;
+  }
+
+  .name_wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav_list {
+    gap: 24px;
+  }
+
+  .gallery_advert {
+    gap: 10px;
+  }
+
+  .photo_advert {
+    width: 100%;
+    height: 200px;
+  }
+
+  .tab {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 20px 16px;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .secondary_info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
 .form_textarea {
   padding-top: 18px;
   height: 114px;
