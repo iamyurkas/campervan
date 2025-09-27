@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/campervan/static/css/main.137dae5b.css",
-    "main.js": "/campervan/static/js/main.27a6c04a.js",
+    "main.js": "/campervan/static/js/main.9474a37d.js",
     "static/css/674.695940d4.chunk.css": "/campervan/static/css/674.695940d4.chunk.css",
     "static/js/674.3cef455e.chunk.js": "/campervan/static/js/674.3cef455e.chunk.js",
-    "static/css/744.f11793f3.chunk.css": "/campervan/static/css/744.f11793f3.chunk.css",
-    "static/js/744.70d07387.chunk.js": "/campervan/static/js/744.70d07387.chunk.js",
+    "static/css/744.ca250291.chunk.css": "/campervan/static/css/744.ca250291.chunk.css",
+    "static/js/744.e7eb2b84.chunk.js": "/campervan/static/js/744.e7eb2b84.chunk.js",
     "static/css/146.53a68def.chunk.css": "/campervan/static/css/146.53a68def.chunk.css",
     "static/js/146.6e04003b.chunk.js": "/campervan/static/js/146.6e04003b.chunk.js",
     "static/js/982.b93c5a14.chunk.js": "/campervan/static/js/982.b93c5a14.chunk.js",
@@ -45,11 +45,11 @@
     "static/media/kitchen.svg": "/campervan/static/media/kitchen.d93b1361d7840c251004d2ff3fe6e046.svg",
     "static/media/close.svg": "/campervan/static/media/close.25dc3f46a342a188874fa545ced03ca2.svg",
     "main.137dae5b.css.map": "/campervan/static/css/main.137dae5b.css.map",
-    "main.27a6c04a.js.map": "/campervan/static/js/main.27a6c04a.js.map",
+    "main.9474a37d.js.map": "/campervan/static/js/main.9474a37d.js.map",
     "674.695940d4.chunk.css.map": "/campervan/static/css/674.695940d4.chunk.css.map",
     "674.3cef455e.chunk.js.map": "/campervan/static/js/674.3cef455e.chunk.js.map",
-    "744.f11793f3.chunk.css.map": "/campervan/static/css/744.f11793f3.chunk.css.map",
-    "744.70d07387.chunk.js.map": "/campervan/static/js/744.70d07387.chunk.js.map",
+    "744.ca250291.chunk.css.map": "/campervan/static/css/744.ca250291.chunk.css.map",
+    "744.e7eb2b84.chunk.js.map": "/campervan/static/js/744.e7eb2b84.chunk.js.map",
     "146.53a68def.chunk.css.map": "/campervan/static/css/146.53a68def.chunk.css.map",
     "146.6e04003b.chunk.js.map": "/campervan/static/js/146.6e04003b.chunk.js.map",
     "982.b93c5a14.chunk.js.map": "/campervan/static/js/982.b93c5a14.chunk.js.map",
@@ -58,6 +58,6 @@
   },
   "entrypoints": [
     "static/css/main.137dae5b.css",
-    "static/js/main.27a6c04a.js"
+    "static/js/main.9474a37d.js"
   ]
 }
