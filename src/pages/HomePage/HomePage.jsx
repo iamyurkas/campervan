@@ -8,8 +8,14 @@ const Home = () => {
   return (
     <div>
       <NavList/> 
-        <div className={styles.home_wrapper}> 
-          <img src={camper_img} alt="Campers" width="625" height="222"/>
+        <div className={styles.home_wrapper}>
+          <img
+            className={styles.hero_image}
+            src={camper_img}
+            alt="Campers"
+            width="625"
+            height="222"
+          />
           <div>
             <Link to="/catalog" className={styles.hero_btn}>
               Buy a camper
