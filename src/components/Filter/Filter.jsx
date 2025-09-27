@@ -17,7 +17,7 @@ import wind_icon from '../../assets/icons/wind.svg';
 import location_icon from '../../assets/icons/location.svg';
 import location_disabled_icon from '../../assets/icons/location_disabled.svg';
 
-export const Filter = () => {
+export const Filter = ({ onSearchComplete }) => {
   const dispatch = useDispatch();
   const campers = useSelector(state => state.favorite.campers);
 
@@ -112,6 +112,9 @@ export const Filter = () => {
     }
 
     dispatch(setFilteredCampers(filteredResult));
+    if (typeof onSearchComplete === 'function') {
+      onSearchComplete();
+    }
   };
 
   return (
