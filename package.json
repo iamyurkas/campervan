@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://iamyurkas.github.io/goit-react-woolf-hw-testtask/",
+  "homepage": "https://iamyurkas.github.io/campervan/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.4",
     "@testing-library/jest-dom": "^5.16.3",
