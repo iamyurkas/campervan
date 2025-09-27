@@ -1,48 +1,113 @@
-.home_wrapper {
+.heroSection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 48px;
+  padding: 48px clamp(24px, 5vw, 80px) 0;
+}
+
+.heroContent {
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 24px;
+}
+
+.eyebrow {
+  color: #e44848;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.heroTitle {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.1;
+  color: #101828;
+  margin: 0;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #475467;
+  max-width: 520px;
+  margin: 0;
+}
+
+.heroBtn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 24px 0;
-}
-.hero_btn {
-  display: block;
+  width: fit-content;
   padding: 16px 40px;
   border-radius: 200px;
-  background: #e44848;
+  background: linear-gradient(135deg, #ff7b54 0%, #e44848 100%);
   color: #f7f7f7;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.08px;
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
 }
 
-.hero_btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(16, 24, 40, 0.2);
+.heroBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(228, 72, 72, 0.25);
 }
 
-@media (max-width: 1024px) {
-  .home_wrapper {
-    padding: 0 24px;
-  }
+.heroMedia {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .home_wrapper {
-    gap: 48px;
-    padding: 0 16px;
+.heroImage {
+  width: min(100%, 620px);
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 30px 60px rgba(16, 24, 40, 0.15);
+}
+
+@media (max-width: 1023px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+    padding: 40px 32px 0;
   }
 
-  .home_wrapper img {
-    width: 100%;
-    height: auto;
-  }
-
-  .hero_btn {
-    width: 100%;
+  .heroContent {
+    order: 2;
     text-align: center;
+    align-items: center;
+  }
+
+  .heroSubtitle {
+    max-width: none;
+  }
+
+  .heroBtn {
+    width: 100%;
+  }
+
+  .heroMedia {
+    order: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .heroSection {
+    padding: 32px 16px 0;
+    gap: 32px;
+  }
+
+  .heroTitle {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+
+  .heroBtn {
+    padding: 14px 32px;
   }
 }
