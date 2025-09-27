@@ -247,7 +247,12 @@
     gap: 8px;
   }
 
+  .list_details {
+    gap: 10px;
+  }
+
   .item_details {
-    width: 100%;
+    flex: 1 1 calc(50% - 5px);
+    width: calc(50% - 5px);
   }
 }
