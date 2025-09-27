@@ -2,8 +2,9 @@
   display: flex;
   gap: 64px;
   justify-content: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  align-items: flex-start;
+  margin: 32px auto 48px;
+  padding: 0 32px;
 }
 
 @media (max-width: 1200px) {

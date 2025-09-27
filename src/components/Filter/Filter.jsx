@@ -115,31 +115,33 @@ export const Filter = () => {
   };
 
   return (
-    <div className={styles.filter_container}>
-      <div className={styles.location_container}>
-        <label className={styles.location_label} htmlFor="location_input">
-          Location{' '}
-        </label>
-        <div className={styles.relative_container}>
-          <input
-            className={styles.location_input}
-            type="text"
-            id="location_input"
-            name="location"
-            placeholder="Location"
-            required
-            onBlur={handleBlur}
-            onFocus={handleFocus}
-            onChange={(e) => setCityFilter(e.target.value)}
-          />
-          <img
-            className={styles.location_icon_disabled}
-            src={isInputFocused || inputValue ? location_icon : location_disabled_icon}
-            alt="location_icon"
-          />
+    <aside className={styles.filter_container}>
+      <div className={styles.section}>
+        <div className={styles.location_container}>
+          <label className={styles.location_label} htmlFor="location_input">
+            Location{' '}
+          </label>
+          <div className={styles.relative_container}>
+            <input
+              className={styles.location_input}
+              type="text"
+              id="location_input"
+              name="location"
+              placeholder="Location"
+              required
+              onBlur={handleBlur}
+              onFocus={handleFocus}
+              onChange={(e) => setCityFilter(e.target.value)}
+            />
+            <img
+              className={styles.location_icon_disabled}
+              src={isInputFocused || inputValue ? location_icon : location_disabled_icon}
+              alt="location_icon"
+            />
+          </div>
         </div>
       </div>
-      <div>
+      <div className={styles.section}>
         <p className={styles.filters_title}>Filters</p>
         <div className={styles.filters_wrapper}>
           <div className={styles.equipment_wrapper}>
@@ -189,6 +191,6 @@ export const Filter = () => {
         </div>
       </div>
       <button onClick={filterCampers} className={styles.search_btn}>Search</button>
-    </div>
+    </aside>
   );
 };
