@@ -106,6 +106,7 @@
   background: #f2f4f7;
   mix-blend-mode: multiply;
   text-transform: capitalize;
+  box-sizing: border-box;
 }
 
 .header_detail {
