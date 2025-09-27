@@ -5,6 +5,7 @@ import fetchCampers from '../../Api/ApiService';
 import { setFilteredCampers, startLoading, finishLoading, setCampers } from '../../redux/actions/actions';
 
 import styles from './Filter.module.css';
+import { MobileDateRangePicker } from './MobileDateRangePicker';
 
 import van_icon from '../../assets/icons/van.svg';
 import fully_integrated_icon from '../../assets/icons/fully_integrated.svg';
@@ -172,27 +173,14 @@ export const Filter = ({ onSearchComplete }) => {
         </div>
         <div className={styles.dates_wrapper}>
           <p className={styles.section_label}>Rental dates</p>
-          <div className={styles.date_inputs}>
-            <label className={styles.visually_hidden} htmlFor="rental_start_date">Pick-up date</label>
-            <input
-              className={styles.date_input}
-              type="date"
-              id="rental_start_date"
-              name="rental_start_date"
-              value={rentalStartDate}
-              onChange={(e) => setRentalStartDate(e.target.value)}
-            />
-            <label className={styles.visually_hidden} htmlFor="rental_end_date">Return date</label>
-            <input
-              className={styles.date_input}
-              type="date"
-              id="rental_end_date"
-              name="rental_end_date"
-              min={rentalStartDate || undefined}
-              value={rentalEndDate}
-              onChange={(e) => setRentalEndDate(e.target.value)}
-            />
-          </div>
+          <MobileDateRangePicker
+            startDate={rentalStartDate}
+            endDate={rentalEndDate}
+            onChange={({ startDate, endDate }) => {
+              setRentalStartDate(startDate);
+              setRentalEndDate(endDate);
+            }}
+          />
           {dateError && <p className={styles.error_text}>{dateError}</p>}
         </div>
         <div className={styles.people_wrapper}>

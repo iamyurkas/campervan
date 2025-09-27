@@ -62,20 +62,6 @@
   font-weight: 500;
 }
 
-.date_inputs {
-  display: flex;
-  gap: 8px;
-}
-
-.date_input {
-  width: 100%;
-  padding: 18px;
-  border-radius: 10px;
-  background: #f7f7f7;
-  border: none;
-  color: #101828;
-}
-
 .number_input {
   padding: 18px;
   border-radius: 10px;
