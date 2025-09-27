@@ -187,3 +187,32 @@
 .equipment_list_item img {
   margin-bottom: 8px;
 }
+
+@media (max-width: 768px) {
+  .filter_container {
+    gap: 24px;
+  }
+
+  .location_container,
+  .equipment_wrapper,
+  .types_wrapper {
+    width: 100%;
+  }
+
+  .filters_wrapper {
+    gap: 24px;
+  }
+
+  .equipment_list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .types_list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search_btn {
+    align-self: stretch;
+  }
+}
