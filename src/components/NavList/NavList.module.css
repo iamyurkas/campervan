@@ -1,3 +1,7 @@
+.nav_list_wrapper {
+  padding: 0 32px;
+}
+
 .navList {
   list-style: none;
   display: flex;
@@ -7,7 +11,7 @@
   font-weight: 500;
   gap: 60px;
   margin: 0;
-  padding: 20px 0 20px 20px;
+  padding: 20px 0;
 }
 
 .navItem {
@@ -33,4 +37,20 @@
 
 .navItem .activeLink {
   color: #e44848;
+}
+
+@media (max-width: 1024px) {
+  .nav_list_wrapper {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_list_wrapper {
+    padding: 0 16px;
+  }
+
+  .navList {
+    gap: 24px;
+  }
 }

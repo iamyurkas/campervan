@@ -23,3 +23,26 @@
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(16, 24, 40, 0.2);
 }
+
+@media (max-width: 1024px) {
+  .home_wrapper {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home_wrapper {
+    gap: 48px;
+    padding: 0 16px;
+  }
+
+  .home_wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero_btn {
+    width: 100%;
+    text-align: center;
+  }
+}
