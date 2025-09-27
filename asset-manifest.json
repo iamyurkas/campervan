@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/campervan/static/css/main.137dae5b.css",
-    "main.js": "/campervan/static/js/main.9474a37d.js",
-    "static/css/674.695940d4.chunk.css": "/campervan/static/css/674.695940d4.chunk.css",
-    "static/js/674.3cef455e.chunk.js": "/campervan/static/js/674.3cef455e.chunk.js",
-    "static/css/744.ca250291.chunk.css": "/campervan/static/css/744.ca250291.chunk.css",
+    "main.js": "/campervan/static/js/main.bb398e69.js",
+    "static/css/674.294208b0.chunk.css": "/campervan/static/css/674.294208b0.chunk.css",
+    "static/js/674.71fabd4b.chunk.js": "/campervan/static/js/674.71fabd4b.chunk.js",
+    "static/css/744.6c3c115b.chunk.css": "/campervan/static/css/744.6c3c115b.chunk.css",
     "static/js/744.e7eb2b84.chunk.js": "/campervan/static/js/744.e7eb2b84.chunk.js",
-    "static/css/146.53a68def.chunk.css": "/campervan/static/css/146.53a68def.chunk.css",
+    "static/css/146.d1058f42.chunk.css": "/campervan/static/css/146.d1058f42.chunk.css",
     "static/js/146.6e04003b.chunk.js": "/campervan/static/js/146.6e04003b.chunk.js",
     "static/js/982.b93c5a14.chunk.js": "/campervan/static/js/982.b93c5a14.chunk.js",
     "static/js/903.a9142826.chunk.js": "/campervan/static/js/903.a9142826.chunk.js",
-    "static/js/666.183e1d8e.chunk.js": "/campervan/static/js/666.183e1d8e.chunk.js",
+    "static/js/666.d2384e38.chunk.js": "/campervan/static/js/666.d2384e38.chunk.js",
     "static/media/Inter-Bold.ttf": "/campervan/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
     "static/media/Inter-Medium.ttf": "/campervan/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/campervan/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
@@ -45,19 +45,19 @@
     "static/media/kitchen.svg": "/campervan/static/media/kitchen.d93b1361d7840c251004d2ff3fe6e046.svg",
     "static/media/close.svg": "/campervan/static/media/close.25dc3f46a342a188874fa545ced03ca2.svg",
     "main.137dae5b.css.map": "/campervan/static/css/main.137dae5b.css.map",
-    "main.9474a37d.js.map": "/campervan/static/js/main.9474a37d.js.map",
-    "674.695940d4.chunk.css.map": "/campervan/static/css/674.695940d4.chunk.css.map",
-    "674.3cef455e.chunk.js.map": "/campervan/static/js/674.3cef455e.chunk.js.map",
-    "744.ca250291.chunk.css.map": "/campervan/static/css/744.ca250291.chunk.css.map",
+    "main.bb398e69.js.map": "/campervan/static/js/main.bb398e69.js.map",
+    "674.294208b0.chunk.css.map": "/campervan/static/css/674.294208b0.chunk.css.map",
+    "674.71fabd4b.chunk.js.map": "/campervan/static/js/674.71fabd4b.chunk.js.map",
+    "744.6c3c115b.chunk.css.map": "/campervan/static/css/744.6c3c115b.chunk.css.map",
     "744.e7eb2b84.chunk.js.map": "/campervan/static/js/744.e7eb2b84.chunk.js.map",
-    "146.53a68def.chunk.css.map": "/campervan/static/css/146.53a68def.chunk.css.map",
+    "146.d1058f42.chunk.css.map": "/campervan/static/css/146.d1058f42.chunk.css.map",
     "146.6e04003b.chunk.js.map": "/campervan/static/js/146.6e04003b.chunk.js.map",
     "982.b93c5a14.chunk.js.map": "/campervan/static/js/982.b93c5a14.chunk.js.map",
     "903.a9142826.chunk.js.map": "/campervan/static/js/903.a9142826.chunk.js.map",
-    "666.183e1d8e.chunk.js.map": "/campervan/static/js/666.183e1d8e.chunk.js.map"
+    "666.d2384e38.chunk.js.map": "/campervan/static/js/666.d2384e38.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.137dae5b.css",
-    "static/js/main.9474a37d.js"
+    "static/js/main.bb398e69.js"
   ]
 }
