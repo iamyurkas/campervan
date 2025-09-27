@@ -233,6 +233,12 @@
 }
 
 @media (max-width: 480px) {
+  .list_details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
   .card_info {
     padding: 16px;
   }
@@ -246,13 +252,7 @@
     align-items: flex-start;
     gap: 8px;
   }
-
-  .list_details {
-    gap: 10px;
-  }
-
   .item_details {
-    flex: 1 1 calc(50% - 5px);
-    width: calc(50% - 5px);
+    width: 100%;
   }
 }
