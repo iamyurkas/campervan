@@ -1,0 +1,248 @@
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.35fr);
+  grid-template-areas:
+    'location dates'
+    'travelers submit';
+  column-gap: 24px;
+  row-gap: 20px;
+  padding: 32px;
+  border-radius: 28px;
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f6ff 100%);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  max-width: 680px;
+}
+
+.form::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  border: 1px solid rgba(208, 213, 221, 0.6);
+  pointer-events: none;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.locationField {
+  grid-area: location;
+}
+
+.datesField {
+  grid-area: dates;
+}
+
+.travelersField {
+  grid-area: travelers;
+}
+
+.submitField {
+  grid-area: submit;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #475467;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 18px 20px 18px 52px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2933;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #e44848;
+  box-shadow: 0 0 0 3px rgba(228, 72, 72, 0.2);
+}
+
+.inputField::-webkit-outer-spin-button,
+.inputField::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputField[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.clickableField {
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.inputPlaceholder {
+  color: #98a2b3;
+}
+
+.inputValue {
+  color: #1f2933;
+}
+
+.submitButton {
+  border: none;
+  border-radius: 16px;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #ff7a59 0%, #e44848 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+  align-self: stretch;
+  min-height: 62px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(228, 72, 72, 0.35);
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(228, 72, 72, 0.2);
+}
+
+.calendar {
+  border: none !important;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18) !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+}
+
+.calendar :global(.react-datepicker__header) {
+  background: #fff;
+  border-bottom: none;
+  padding: 16px 24px 0;
+}
+
+.calendar :global(.react-datepicker__current-month) {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.calendar :global(.react-datepicker__month-container) {
+  padding: 16px 24px 24px;
+}
+
+.calendar :global(.react-datepicker__day-name) {
+  color: #64748b;
+  width: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.calendar :global(.react-datepicker__day) {
+  width: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 12px;
+  color: #0f172a;
+}
+
+.calendar :global(.react-datepicker__day--selected),
+.calendar :global(.react-datepicker__day--in-range) {
+  background-color: rgba(228, 72, 72, 0.12);
+  color: #e44848;
+}
+
+.calendar :global(.react-datepicker__day--keyboard-selected) {
+  background-color: rgba(228, 72, 72, 0.24);
+  color: #e44848;
+}
+
+.calendar :global(.react-datepicker__day--in-selecting-range) {
+  background-color: rgba(228, 72, 72, 0.18);
+  color: #e44848;
+}
+
+.calendar :global(.react-datepicker__navigation) {
+  top: 20px;
+}
+
+.calendar :global(.react-datepicker__navigation-icon::before) {
+  border-color: #475467;
+}
+
+.calendarPopper {
+  z-index: 10;
+}
+
+@media (max-width: 1023px) {
+  .form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      'location dates'
+      'travelers submit';
+    max-width: 100%;
+    padding: 28px 24px;
+    column-gap: 20px;
+    row-gap: 18px;
+  }
+
+  .submitButton {
+    min-height: 58px;
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'location'
+      'dates'
+      'travelers'
+      'submit';
+    gap: 20px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
+  }
+
+  .fieldGroup {
+    width: 100%;
+  }
+
+  .submitButton {
+    width: 100%;
+    height: auto;
+    padding: 18px;
+  }
+
+  .form::after {
+    border-radius: 24px;
+  }
+}
