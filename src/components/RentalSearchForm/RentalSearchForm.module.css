@@ -1,0 +1,228 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  align-items: end;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 48px rgba(16, 24, 40, 0.12);
+  max-width: 960px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #475467;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 18px 20px 18px 52px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2933;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #e44848;
+  box-shadow: 0 0 0 3px rgba(228, 72, 72, 0.2);
+}
+
+.inputField::-webkit-outer-spin-button,
+.inputField::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputField[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.clickableField {
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.clickableField .inputIcon {
+  position: static;
+  transform: none;
+  pointer-events: none;
+}
+
+.inputPlaceholder {
+  color: #98a2b3;
+}
+
+.inputValue {
+  color: #1f2933;
+}
+
+.submitButton {
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #ff7a59 0%, #e44848 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(228, 72, 72, 0.35);
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(228, 72, 72, 0.2);
+}
+
+.calendar {
+  border: none !important;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18) !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+}
+
+.calendar :global(.react-datepicker__header) {
+  background: #fff;
+  border-bottom: none;
+  padding: 16px 24px 0;
+}
+
+.calendar :global(.react-datepicker__current-month) {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.calendar :global(.react-datepicker__month-container) {
+  padding: 16px 24px 24px;
+}
+
+.calendar :global(.react-datepicker__day-name) {
+  color: #64748b;
+  width: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.calendar :global(.react-datepicker__day) {
+  width: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 12px;
+  color: #0f172a;
+}
+
+.calendar :global(.react-datepicker__day--selected),
+.calendar :global(.react-datepicker__day--in-range) {
+  background-color: rgba(228, 72, 72, 0.12);
+  color: #e44848;
+}
+
+.calendar :global(.react-datepicker__day--keyboard-selected) {
+  background-color: rgba(228, 72, 72, 0.24);
+  color: #e44848;
+}
+
+.calendar :global(.react-datepicker__day--in-selecting-range) {
+  background-color: rgba(228, 72, 72, 0.18);
+  color: #e44848;
+}
+
+.calendar :global(.react-datepicker__navigation) {
+  top: 20px;
+}
+
+.calendar :global(.react-datepicker__navigation-icon::before) {
+  border-color: #475467;
+}
+
+.calendarPopper {
+  z-index: 10;
+}
+
+@media (max-width: 1279px) {
+  .form {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .submitButton {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 1023px) {
+  .form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .submitButton {
+    grid-column: span 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .fieldGroup {
+    width: 100%;
+  }
+
+  .submitButton {
+    width: 100%;
+    height: auto;
+    padding: 18px;
+  }
+
+  .clickableField {
+    padding: 18px 20px;
+  }
+
+  .clickableField .inputIcon {
+    position: static;
+  }
+}

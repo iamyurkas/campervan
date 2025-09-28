@@ -1,48 +1,91 @@
-.home_wrapper {
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5f7fb 0%, #ffffff 100%);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px 96px;
+}
+
+.heroContent {
   display: flex;
   flex-direction: column;
-  gap: 64px;
-  align-items: center;
+  gap: 24px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e44848;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #101828;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #475467;
+  max-width: 520px;
+}
+
+.heroImageWrapper {
+  display: flex;
   justify-content: center;
-  margin: 24px 0;
-}
-.hero_btn {
-  display: block;
-  padding: 16px 40px;
-  border-radius: 200px;
-  background: #e44848;
-  color: #f7f7f7;
-  font-weight: 500;
-  letter-spacing: -0.08px;
-  border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
+  align-items: center;
 }
 
-.hero_btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(16, 24, 40, 0.2);
+.heroImage {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 32px 64px rgba(15, 23, 42, 0.22);
 }
 
-@media (max-width: 1024px) {
-  .home_wrapper {
-    padding: 0 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .home_wrapper {
-    gap: 48px;
-    padding: 0 16px;
-  }
-
-  .home_wrapper img {
-    width: 100%;
-    height: auto;
-  }
-
-  .hero_btn {
-    width: 100%;
+@media (max-width: 1023px) {
+  .hero {
+    grid-template-columns: 1fr;
     text-align: center;
+    padding: 56px 24px 80px;
+  }
+
+  .heroContent {
+    align-items: center;
+  }
+
+  .description {
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 48px 20px 64px;
+    gap: 32px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .heroImage {
+    border-radius: 24px;
   }
 }
