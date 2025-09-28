@@ -59,6 +59,7 @@
 
 .inputField {
   width: 100%;
+  box-sizing: border-box;
   border-radius: 16px;
   border: 1px solid #d0d5dd;
   background: #fff;
