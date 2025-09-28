@@ -107,7 +107,7 @@ export const RentalSearchForm = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <div className={styles.fieldGroup}>
+      <div className={`${styles.fieldGroup} ${styles.locationField}`}>
         <label className={styles.label} htmlFor="rental-location">
           Місце отримання
         </label>
@@ -118,14 +118,14 @@ export const RentalSearchForm = () => {
             name="location"
             type="text"
             className={styles.inputField}
-            placeholder="Наприклад, Київ, Україна"
+            placeholder="Напрямок"
             value={location}
             onChange={event => setLocation(event.target.value)}
             autoComplete="off"
           />
         </div>
       </div>
-      <div className={styles.fieldGroup}>
+      <div className={`${styles.fieldGroup} ${styles.datesField}`}>
         <span className={styles.label}>Дати оренди</span>
         <DatePicker
           ref={datePickerRef}
@@ -149,7 +149,7 @@ export const RentalSearchForm = () => {
           popperPlacement="bottom-start"
         />
       </div>
-      <div className={styles.fieldGroup}>
+      <div className={`${styles.fieldGroup} ${styles.travelersField}`}>
         <label className={styles.label} htmlFor="travelers-count">
           Кількість людей
         </label>
@@ -167,7 +167,7 @@ export const RentalSearchForm = () => {
           />
         </div>
       </div>
-      <button type="submit" className={styles.submitButton}>
+      <button type="submit" className={`${styles.submitButton} ${styles.submitField}`}>
         Знайти кемпер
       </button>
     </form>
