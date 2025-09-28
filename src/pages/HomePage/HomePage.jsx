@@ -10,16 +10,16 @@ const Home = () => {
       <NavList />
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <p className={styles.subtitle}>Оренда кемперів по всій Україні</p>
-          <h1 className={styles.title}>Створи власну пригоду на колесах</h1>
+          <p className={styles.subtitle}>Camper rentals across Ukraine</p>
+          <h1 className={styles.title}>Create your own road trip adventure</h1>
           <p className={styles.description}>
-            Обирай ідеальний дім на колесах для сімейної відпустки чи швидкої втечі на вихідні.
-            Гнучкі умови оренди, перевірені кемпери та прозора ціна без прихованих платежів.
+            Choose the perfect home on wheels for a family holiday or a spontaneous weekend escape.
+            Flexible rental terms, trusted campers, and transparent pricing without hidden fees.
           </p>
           <RentalSearchForm />
         </div>
         <div className={styles.heroImageWrapper}>
-          <img src={camperImg} alt="Кемпер в подорожі" className={styles.heroImage} />
+          <img src={camperImg} alt="Camper van on a road trip" className={styles.heroImage} />
         </div>
       </section>
     </div>

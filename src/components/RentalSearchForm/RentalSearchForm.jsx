@@ -17,7 +17,7 @@ const DateRangeInput = forwardRef(({ displayValue, hasValue, onClick }, ref) => 
       onClick={onClick}
       ref={ref}
       className={`${styles.inputField} ${styles.clickableField}`}
-      aria-label="Оберіть дати оренди"
+      aria-label="Choose rental dates"
     >
       <img src={calendarIcon} alt="" aria-hidden="true" className={styles.inputIcon} />
       <span className={hasValue ? styles.inputValue : styles.inputPlaceholder}>{displayValue}</span>
@@ -67,17 +67,17 @@ export const RentalSearchForm = () => {
     const formatOptions = { day: '2-digit', month: '2-digit', year: 'numeric' };
 
     if (startDate && endDate) {
-      return `${startDate.toLocaleDateString('uk-UA', formatOptions)} – ${endDate.toLocaleDateString(
-        'uk-UA',
+      return `${startDate.toLocaleDateString('en-GB', formatOptions)} – ${endDate.toLocaleDateString(
+        'en-GB',
         formatOptions
       )}`;
     }
 
     if (startDate) {
-      return `${startDate.toLocaleDateString('uk-UA', formatOptions)} – ...`;
+      return `${startDate.toLocaleDateString('en-GB', formatOptions)} – ...`;
     }
 
-    return 'Дата отримання — Дата повернення';
+    return 'Pick-up date — Drop-off date';
   }, [startDate, endDate]);
 
   const handleSubmit = event => {
@@ -109,7 +109,7 @@ export const RentalSearchForm = () => {
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={`${styles.fieldGroup} ${styles.locationField}`}>
         <label className={styles.label} htmlFor="rental-location">
-          Місце отримання
+          Pick-up location
         </label>
         <div className={styles.inputWrapper}>
           <img src={locationIcon} alt="" aria-hidden="true" className={styles.inputIcon} />
@@ -118,7 +118,7 @@ export const RentalSearchForm = () => {
             name="location"
             type="text"
             className={styles.inputField}
-            placeholder="Напрямок"
+            placeholder="Destination"
             value={location}
             onChange={event => setLocation(event.target.value)}
             autoComplete="off"
@@ -126,7 +126,7 @@ export const RentalSearchForm = () => {
         </div>
       </div>
       <div className={`${styles.fieldGroup} ${styles.datesField}`}>
-        <span className={styles.label}>Дати оренди</span>
+        <span className={styles.label}>Rental dates</span>
         <DatePicker
           ref={datePickerRef}
           selected={startDate}
@@ -151,7 +151,7 @@ export const RentalSearchForm = () => {
       </div>
       <div className={`${styles.fieldGroup} ${styles.travelersField}`}>
         <label className={styles.label} htmlFor="travelers-count">
-          Кількість людей
+          Travelers
         </label>
         <div className={styles.inputWrapper}>
           <img src={personsIcon} alt="" aria-hidden="true" className={styles.inputIcon} />
@@ -168,7 +168,7 @@ export const RentalSearchForm = () => {
         </div>
       </div>
       <button type="submit" className={`${styles.submitButton} ${styles.submitField}`}>
-        Знайти кемпер
+        Find a camper
       </button>
     </form>
   );
